@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Admin</title>
+    <link rel="stylesheet" href="vocadmin.css">
+</head>
+<body>
+    <a href="/index.html" style="color: black; text-decoration: none; font-size: 20px; font-weight: bold; position: absolute; top: 10px; left: 10px;">
+        Homepage
+    </a>
+
+    <div id="form-container" style="margin: 50px;">
+        <form id="add-word-form">
+            <label for="words-input" style="display: block; margin-bottom: 10px; font-weight: bold;">Enter words with definitions and questions:</label>
+            <textarea id="words-input" rows="10" cols="50" placeholder="Enter words in the required format..."></textarea>
+            <button type="submit" style="margin-top: 10px; padding: 10px 20px; font-size: 16px;">Add Words</button>
+        </form>
+    </div>
+
+    <script type="module" src="vocadmin.js"></script>
+</body>
+</html>

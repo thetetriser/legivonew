@@ -1,0 +1,157 @@
+/* General Reset */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Playfair Display, serif;
+  font-weight: semibold;
+}
+
+/* Body Styling */
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#all-content {
+  max-width: 1600px;;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+
+#text-and-questions {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* Title Styling */
+#text-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #4a90e2;
+}
+
+/* Text Content Styling */
+#text-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+/* Highlighted Words */
+.clickable-word {
+  all: unset; /* Reset button styles completely */
+  color: orange;
+  color: inherit; /* Inherit the text color from the parent */
+  cursor: pointer; /* Show a pointer to indicate clickability */
+}
+
+.clickable-word:hover {
+  color: blue; /* Optional: Change color on hover for better user feedback */
+  text-decoration: underline; /* Ensure underline is visible on hover */
+}
+
+.clickable-word.highlighted {
+  background-color: #dff0ff;
+  color: #007acc;
+}
+
+/* Questions Container Styling */
+#questions-container {
+  background: #eef2f7;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    max-width: 98%;
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Modern alternative */
+    box-sizing: border-box;
+  
+}
+
+/* Back Button Styling */
+#back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#back-button:hover {
+  background-color: #357ab7;
+  transform: translateY(-2px);
+}
+
+#back-button:active {
+  transform: translateY(0);
+}
+
+/* Words in Text Container */
+#words-in-text {
+  align-self: start;
+  min-height: 20px;
+  overflow: auto;
+  transition: height 0.5s;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#words-in-text ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#words-in-text li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+
+}
+
+#words-in-text  li:hover {
+  text-decoration: line-through ;
+  cursor: pointer;
+}
+
+#words-in-text strong {
+  color: #4a90e2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  #text-title {
+    font-size: 1.5rem;
+  }
+
+  #back-button {
+    width: 100%;
+    text-align: center;
+  }
+}

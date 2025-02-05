@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Page</title>
+    <link rel="stylesheet" href="reading.css">
+
+</head>
+<body>
+    <a href="../index.html" style="color:azure; text-decoration: none; font-size: 20px; font-weight: bold; margin-left: 20px; margin-top: 20px; " >Homepage</a>
+    <h1 id="text-title">Title goes here</h1>
+    <div id="all-content">
+        <div id="text-and-questions">
+            <div id="text-content">Content goes here</div>
+            <div id="questions-container">
+                <div id="questions-container">
+                    <div id="questions-container">
+                        <h2>Questions</h2>
+                        <div id="mc-questions">
+                          <h3>Multiple-Choice Questions</h3>
+                          <!-- MC questions will be dynamically added here -->
+                        </div>
+                        <div id="tf-questions">
+                          <h3>True/False Questions</h3>
+                          <!-- True/False questions will be dynamically added here -->
+                        </div>
+                        <button id="check-answers-button">Check Answers</button>
+                        <div id="results"></div>
+                      </div>
+                      
+                  </div>
+                  
+            </div>
+        </div>
+        <div id="words-in-text">
+            <button id="start-vocab-test-button">Start vocabulary test</button>
+
+        </div>
+    </div>
+    
+   
+   <button id="back-button" onclick="history.back()">Back</button>
+
+   
+
+    <script type="module" src="reading.js"></script>
+</body>
+</html>

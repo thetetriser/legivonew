@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.words-container, .synonyms-container {
+  width: 45%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.synonym {
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+.blank {
+  display: inline-block;
+  width: 300px;
+  height: 30px;
+  border: 1px dashed #ccc;
+  text-align: center;
+  line-height: 30px;
+}
+
+.blank.drag-over {
+  background-color: #d3ffd3;
+  width: 150px;
+}
+
+.synonym.dragging {
+  opacity: 0.5;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.draggable {
+  background-color: orange;
+}
+
+ li .synonym .draggable {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  order: random(); /* This will scramble the order of the list items */
+}

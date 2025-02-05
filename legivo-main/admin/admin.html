@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"></script>
+
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+  <a href="../index.html" style="color:azure; text-decoration: none; font-size: 20px; font-weight: bold; margin-left: 20px; margin-top: 20px; " >Homepage</a>
+  <a href="../vocadmin/vocadmin.html" style="color:azure; text-decoration: none; font-size: 20px; font-weight: bold; margin-left: 20px; margin-top: 20px; " >Add words</a>
+  <div class="container">
+    <h1>Admin Panel</h1>
+
+    <!-- Add Text Form -->
+    <section>
+      <h2>Add Text</h2>
+      <form id="text-form">
+        <label for="text-id">Text ID:</label>
+        <input type="text" id="text-id" placeholder="Enter Text ID" required />
+
+        <label for="text-content">Text Content:</label>
+        <textarea id="text-content" placeholder="Enter text content" required></textarea>
+
+        <label for="text-no">Text No:</label>
+        <textarea id="text-no" placeholder="Enter text no" required></textarea>
+
+        <button type="submit">Add Text</button>
+      </form>
+    </section>
+
+    <!-- Add Question Form -->
+    <section>
+      <h2>Add Multiple-Choice Question</h2>
+      <form id="mc-question-form">
+        <label for="text-id-mc">Text ID:</label>
+        <input type="text" id="text-id-mc" placeholder="Enter Text ID" required />
+    
+        <label for="mc-question-text">Question:</label>
+        <textarea id="mc-question-text" placeholder="Enter the question" required></textarea>
+    
+        <div id="mc-options-container">
+          <label>Options:</label>
+          <input type="text" class="mc-option" placeholder="Option 1" required />
+          <input type="text" class="mc-option" placeholder="Option 2" required />
+          <input type="text" class="mc-option" placeholder="Option 3" required />
+          <input type="text" class="mc-option" placeholder="Option 4" required />
+        </div>
+    
+        <label for="mc-correct-option">Correct Option:</label>
+        <select id="mc-correct-option" required>
+          <option value="0">Option 1</option>
+          <option value="1">Option 2</option>
+          <option value="2">Option 3</option>
+          <option value="3">Option 4</option>
+        </select>
+    
+        <button type="submit">Add Multiple-Choice Question</button>
+      </form>
+    </section>
+    
+    <section>
+      <h2>Add True/False Question</h2>
+      <form id="tf-question-form">
+        <label for="text-id-tf">Text ID:</label>
+        <input type="text" id="text-id-tf" placeholder="Enter Text ID" required />
+    
+        <label for="tf-statement-text">Statement:</label>
+        <textarea id="tf-statement-text" placeholder="Enter the statement" required></textarea>
+    
+        <label for="tf-is-true">Is True:</label>
+        <select id="tf-is-true" required>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+    
+        <button type="submit">Add True/False Question</button>
+      </form>
+    </section>
+    
+  </div>
+
+  <!-- Your custom JS file -->
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
